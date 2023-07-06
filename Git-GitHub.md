@@ -113,18 +113,18 @@ git help 'comando': mostra detalhes sobre o comando
 - **git reset**: Tira as alterações do stage
 
 migração de master para main
-- **git branch -m main** --->
-- **git init -b main 'Diretório'** --->
-- **git config --global init.defaultBranch main** --->
-- git branch ---> mostra as branchs locais
-- git branch -a ---> mostra local e as cópias locais das remote branches
-- git branch -r ---> mostra as cópias locais das remote branches
-- git branch 'nome-branch' ---> cria uma branch
-- git ls-remote ---> busca a lista de branchs remotas
-- git fetch origin ---> atualiza as cópias locais das branchs remotas com as branchs remotas
-- git branch -vv ---> mostra todas as branchs locais com mais informações
-- git branch --delete --remote 'nome branch' --> deleta uma trackingbranch
-- git push --delete 'branch' --> para deletar uma branch do github e local
+- **git branch -m main** ---> Renomeia a branch atual para "main". Recomendado o uso penas após a criação da master branch
+- **git init -b main 'Diretório'** ---> Cria um novo repositório Git no diretório especificado e define o branch padrão como "main"
+- **git config --global init.defaultBranch main** ---> Define globalmente o branch padrão como "main" para todos os novos repositórios Git que você inicializará no seu sistema.
+- **git branch** ---> mostra as branchs locais
+- **git branch** -a ---> mostra local e as cópias locais das remote branches
+- **git branch** -r ---> mostra as cópias locais das remote branches
+- **git branch** 'nome-branch' ---> cria uma branch
+- **git ls-remote** ---> busca a lista de branchs remotas
+- **git fetch origin** ---> atualiza as cópias locais das branchs remotas com as branchs remotas
+- **git branch -vv** ---> mostra todas as branchs locais com mais informações
+- **git branch --delete** --remote 'nome branch' --> deleta uma trackingbranch
+- **git push --delete** 'branch' --> para deletar uma branch do github e local
 - git branch --track branchname origin/branchname ---> cria uma branch com uma trackingbranch
 - git checkout 'nomeBranch' ---> muda para a branch
 - git checkout . ou git restore .---> reverte todas alterações até o ultimo commit

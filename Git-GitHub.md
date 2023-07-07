@@ -50,8 +50,6 @@ Principais características:
 - **remote**: seria a ultima etapa no fluxo de trabalho onde as mudanças são submetidas para uma plataforma online. Onde no comando origin é um alias para a URL que será cadastrada.
 
 ## Comandos
-Recomendável ler sobre comandos do [Linux](/Linux.md)
-As aspas simples foram utilizadas para demonstrar textos que podem/devem ser alterados conforme situação
 
 <details open>
 <summary>

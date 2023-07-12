@@ -211,7 +211,7 @@ lightweighttag são como a HEAD das branchs, anotatedtags
 </summary>
 
 - **git clone 'Url do repositório'** --->
-- **git pull** ---> busca as alterações na branch principal remota(é uma mistura de git fetch e git merge juntos. Ele atualiza cópia da branch remota q temos no nosso computador e mergea com a branch atual)
+- **git pull** ---> busca as alterações na branch principal remota(é uma mistura de git fetch e git merge juntos. Ele atualiza cópia da branch remota q temos no nosso computador e merge a com a branch atual)
 - **git push origin(a abreviação dada ao repositório remoto escolhido) master(local or remote? branch)** ---> caso não seja especificado ele assume o que foi feito a primeira vez
 - **git remote add 'origin' 'URL'** ---> Adiciona uma URL junto a uma abreviação para ela (geralmente usada como origin) para quando for utilizar ela. utilizar a URL no lugar de origin em outros comandos também funciona mas é ineficiente
 - **git fetch** ---> busca todas as alterações remotas incluindo outras branchs

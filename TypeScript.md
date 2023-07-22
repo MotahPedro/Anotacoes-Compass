@@ -136,23 +136,23 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   -É possível aplicar modificadores de acesso (public, private, protected) para controlar o acesso aos membros da classe.
 
   **EX:**
+
   class teste {
-      mensagem: string
-      numero: number
+    mensagem: string
+    numero: number
 
-      constructor (escrita: string, numero: number){
-          this.mensagem = escrita
-          this.numero = numero
-      }
+    constructor (escrita: string, numero: number){
+        this.mensagem = escrita
+        this.numero = numero
+    }
 
-      saida(){
-          console.log(`Olá, ${this.mensagem}, ${ this.numero}`)
-      }
+    saida(){
+        console.log(`Olá, ${this.mensagem}, ${ this.numero}`)
+    }
   }
-
   const Teste1 = new teste("Testando",123)
   Teste1.saida()
-
+  
 
 </details>
 
@@ -166,7 +166,7 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   Uma interface é uma especificação para um tipo de objeto, definindo quais propriedades e métodos o objeto deve ter. Isso permite que o TypeScript faça a verificação de tipos em tempo de compilação, garantindo que os objetos sigam as regras definidas pela interface.
 
   ***Informações Basicas Sobre Interfaces***
-  
+
   -Uma interface é um contrato que define a estrutura de um objeto, descrevendo quais propriedades e métodos devem estar presentes no objeto.
   -É uma forma de definir tipos personalizados, mas não contém implementações de métodos.
   -Não pode ser instanciada diretamente, pois não é uma construção para criar objetos.
@@ -175,6 +175,7 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
 
 
   **EX:**
+
   interface Testei {
     mensagem: string
     numero: number
@@ -186,6 +187,24 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   }
 
 console.log(`${teste2.mensagem} ${teste2.numero}`)
+
+</details>
+
+## Genéricos
+<details>
+  <summary>
+
+  ### O que são?
+  </summary>
+
+</details>
+
+## Decoradores
+<details>
+  <summary>
+
+  ### Decoradores O que são?
+  </summary>
 
 </details>
 

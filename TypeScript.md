@@ -33,23 +33,24 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
 <details>
   <summary>
 
-  ## Types cores (all lowerCase)
+  ## Types cores (Sempre minúsculas)
   </summary>
 
-number
-string
-boolean (Sem truthy or falsy)
-object
-array
-tuple
-Enum
-Any (Praticamente perde os benefícios do uso do TS)
+**number**
+**string**
+**boolean** (Sem truthy or falsy)
+**object**
+**array**
+**tuple**
+**Enum**
+**Any** (Praticamente perde os benefícios do uso do TS)
+**Void** (Ausente de tipo)
 
 ex.
 function (n1: number, n2: number) {
 }
 
-// Em objetos e arrays, o ideal é dexar o typescript definir os tipos conforme os elementos são atribuidos
+**Dica:** Em objetos e arrays, o ideal é dexar o typescript definir os tipos conforme os elementos são atribuidos
 const object: {
   CPF: number;
   nome: string;
@@ -60,7 +61,7 @@ const object: {
   empregado: true
 }
 
-const nomes string[] = ['Pedro', 'Mota'];
+### Tuple
 const person [string, number | string] = ['Pedro', 20];
 
 ### Enum
@@ -68,13 +69,10 @@ Cria e da um valor iniciando em 0 ou a partir do valor explicito no anterior, pa
 enum Role { ADMIN, READ_ONLY = 5, AUTHOR };
 
 ### Type Alias
+É um tipo que pode ser um ou outro
+
 type Combinados = {
   number | string
-}
-
-type Dados = {
-  name: 'Pedro';
-  cpf: number;
 }
 
 ### Void
@@ -110,13 +108,41 @@ class Product {
     this.isListed = true;
   }
 }
-
 const accounting = new Department('Accounting');
-
 extends aproveita uma classe já criada e usa como parte na criação de uma nova mas com adições. É necessário usar o super.
+
+
 private -> deixa privado sendo acessado apenas pela própria classe
 public
 protected -> deixa privado mas pode ser acessado tanto pela própria classe como por classes que usem-a como extensão
+
+<details>
+  <summary>
+
+  ## Classes
+  </summary>
+
+### O que são:
+Uma classe é uma entidade abstrata que encapsula dados e comportamentos relevantes para um conceito específico dentro de um programa. Ela permite que você defina um novo tipo de dado personalizado, permitindo que crie instâncias desse tipo ao longo do código.
+
+**EX:**
+class teste {
+    mensagem: string
+    numero: number
+
+    constructor (escrita: string, numero: number){
+        this.mensagem = escrita
+        this.numero = numero
+    }
+
+    saida(){
+        console.log(`Olá, ${this.mensagem}, ${ this.numero}`)
+    }
+}
+
+const Teste1 = new teste("Testando",123)
+Teste1.saida()
+
 
 
 É preciso instalar node antes para utilizar!

@@ -30,10 +30,11 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
 "inclue": "arquivo.ts"       Por padrão já vem com todos arquivos, tendo que especificar todos caso queira especificar um arquivo
 "files": "diretório"         Mesma coisa mas com diretórios
 
+## Tipos
 <details>
   <summary>
 
-  ## Types cores (Sempre minúsculas)
+  ### Types cores (Sempre minúsculas)
   </summary>
 
   **number**
@@ -117,14 +118,22 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   protected -> deixa privado mas pode ser acessado tanto pela própria classe como por classes que usem-a como extensão
 </details>
 
+## Classes & Interfaces
 <details>
   <summary>
 
-  ## Classes
+  ### Classes
   </summary>
 
   ### O que são:
   Uma classe é uma entidade abstrata que encapsula dados e comportamentos relevantes para um conceito específico dentro de um programa. Ela permite que você defina um novo tipo de dado personalizado, permitindo que crie instâncias desse tipo ao longo do código.
+
+  ***Informações Basicas Sobre Classes***
+  -É uma construção da programação orientada a objetos (POO) e é usada para criar objetos.
+  -Pode conter implementações de métodos, ou seja, o código real que define o comportamento desses métodos.
+  -Permite criar instâncias através do operador new.
+  -Pode herdar propriedades e métodos de outra classe (herança).
+  -É possível aplicar modificadores de acesso (public, private, protected) para controlar o acesso aos membros da classe.
 
   **EX:**
   class teste {
@@ -141,10 +150,44 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
       }
   }
 
+  const Teste1 = new teste("Testando",123)
+  Teste1.saida()
+
+
 </details>
 
-const Teste1 = new teste("Testando",123)
-Teste1.saida()
+<details>
+  <summary>
+
+  ### Interface
+  </summary>
+  
+  ### O que são:
+  Uma interface é uma especificação para um tipo de objeto, definindo quais propriedades e métodos o objeto deve ter. Isso permite que o TypeScript faça a verificação de tipos em tempo de compilação, garantindo que os objetos sigam as regras definidas pela interface.
+
+  ***Informações Basicas Sobre Interfaces***
+  
+  -Uma interface é um contrato que define a estrutura de um objeto, descrevendo quais propriedades e métodos devem estar presentes no objeto.
+  -É uma forma de definir tipos personalizados, mas não contém implementações de métodos.
+  -Não pode ser instanciada diretamente, pois não é uma construção para criar objetos.
+  -É usada principalmente para declarar a forma que um objeto deve ter, garantindo que certos atributos e métodos estejam presentes.
+  -Pode ser implementada por classes (uma classe pode "assinar" um contrato representado por uma interface).
+
+
+  **EX:**
+  interface Testei {
+    mensagem: string
+    numero: number
+  }
+
+  const teste2: Testei = {
+    mensagem: "Testando",
+    numero: 123
+  }
+
+console.log(`${teste2.mensagem} ${teste2.numero}`)
+
+</details>
 
 
 

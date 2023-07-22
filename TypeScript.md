@@ -115,7 +115,7 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   private -> deixa privado sendo acessado apenas pela própria classe
   public
   protected -> deixa privado mas pode ser acessado tanto pela própria classe como por classes que usem-a como extensão
-<details>
+</details>
 
 <details>
   <summary>
@@ -141,7 +141,7 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
       }
   }
 
-<details>
+</details>
 
 const Teste1 = new teste("Testando",123)
 Teste1.saida()

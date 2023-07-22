@@ -34,87 +34,87 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   <summary>
 
   ## Types cores (Sempre minúsculas)
+
+  **number**
+  **string**
+  **boolean** (Sem truthy or falsy)
+  **object**
+  **array**
+  **tuple**
+  **Enum**
+  **Any** (Praticamente perde os benefícios do uso do TS)
+  **Void** (Ausente de tipo)
+
+  ex.
+  function (n1: number, n2: number) {
+  }
+
+  **Dica:** Em objetos e arrays, o ideal é dexar o typescript definir os tipos conforme os elementos são atribuidos
+  const object: {
+    CPF: number;
+    nome: string;
+    empregado: boolean;
+  } = {
+    CPF: 0000000,
+    nome: 'Pedro',
+    empregado: true
+  }
+
+  ### Tuple
+  const person [string, number | string] = ['Pedro', 20];
+
+  ### Enum
+  Cria e da um valor iniciando em 0 ou a partir do valor explicito no anterior, para os elementos atribuidos. ADMIN = 0, READ_ONLY = 5, AUTHOR = 6.
+  enum Role { ADMIN, READ_ONLY = 5, AUTHOR };
+
+  ### Type Alias
+  É um tipo que pode ser um ou outro
+
+  type Combinados = {
+    number | string
+  }
+
+  ### Void
+  É a tipagem dada a uma função que não possui retorno.
+  Apesar do retorno dela ser definido com undefined...
+
+  ### Function types
+  let combine: (a:number, b:number) => number;
+
+  ### Unknown
+  Quase a mesma coisa de any, mas ele ainda é verificado. Seria um any mantendo a verificação se o tipo esperado é compatível com o tipo armazenado em uma variável com unknown
+
+  ### Never
+  Uma função que retorna nada devido uma pausa/break/error ou que fica em um loop infinito. Uma função pode ter o retorno de tipo never
+
+
+  class Department {
+    private name: string;
+
+    public constructor (n: string) {
+      this.name = n;
+    }
+  }
+
+  class Product {
+    title: string;
+    price: number;
+    private isListed: boolean;
+  
+    constructor(name: string, pr: number) {
+      this.title = name;
+      this.price = pr;
+      this.isListed = true;
+    }
+  }
+  const accounting = new Department('Accounting');
+  extends aproveita uma classe já criada e usa como parte na criação de uma nova mas com adições. É necessário usar o super.
+
+
+  private -> deixa privado sendo acessado apenas pela própria classe
+  public
+  protected -> deixa privado mas pode ser acessado tanto pela própria classe como por classes que usem-a como extensão
   </summary>
-
-**number**
-**string**
-**boolean** (Sem truthy or falsy)
-**object**
-**array**
-**tuple**
-**Enum**
-**Any** (Praticamente perde os benefícios do uso do TS)
-**Void** (Ausente de tipo)
-
-ex.
-function (n1: number, n2: number) {
-}
-
-**Dica:** Em objetos e arrays, o ideal é dexar o typescript definir os tipos conforme os elementos são atribuidos
-const object: {
-  CPF: number;
-  nome: string;
-  empregado: boolean;
-} = {
-  CPF: 0000000,
-  nome: 'Pedro',
-  empregado: true
-}
-
-### Tuple
-const person [string, number | string] = ['Pedro', 20];
-
-### Enum
-Cria e da um valor iniciando em 0 ou a partir do valor explicito no anterior, para os elementos atribuidos. ADMIN = 0, READ_ONLY = 5, AUTHOR = 6.
-enum Role { ADMIN, READ_ONLY = 5, AUTHOR };
-
-### Type Alias
-É um tipo que pode ser um ou outro
-
-type Combinados = {
-  number | string
-}
-
-### Void
-É a tipagem dada a uma função que não possui retorno.
-Apesar do retorno dela ser definido com undefined...
-
-### Function types
-let combine: (a:number, b:number) => number;
-
-### Unknown
-Quase a mesma coisa de any, mas ele ainda é verificado. Seria um any mantendo a verificação se o tipo esperado é compatível com o tipo armazenado em uma variável com unknown
-
-### Never
-Uma função que retorna nada devido uma pausa/break/error ou que fica em um loop infinito. Uma função pode ter o retorno de tipo never
-
-
-class Department {
-  private name: string;
-
-  public constructor (n: string) {
-    this.name = n;
-  }
-}
-
-class Product {
-  title: string;
-  price: number;
-  private isListed: boolean;
- 
-  constructor(name: string, pr: number) {
-    this.title = name;
-    this.price = pr;
-    this.isListed = true;
-  }
-}
-const accounting = new Department('Accounting');
-extends aproveita uma classe já criada e usa como parte na criação de uma nova mas com adições. É necessário usar o super.
-
-
-private -> deixa privado sendo acessado apenas pela própria classe
-public
-protected -> deixa privado mas pode ser acessado tanto pela própria classe como por classes que usem-a como extensão
 
 <details>
   <summary>

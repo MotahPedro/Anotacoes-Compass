@@ -34,6 +34,7 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   <summary>
 
   ## Types cores (Sempre minúsculas)
+  </summary>
 
   **number**
   **string**
@@ -114,7 +115,7 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   private -> deixa privado sendo acessado apenas pela própria classe
   public
   protected -> deixa privado mas pode ser acessado tanto pela própria classe como por classes que usem-a como extensão
-  </summary>
+<details>
 
 <details>
   <summary>
@@ -122,23 +123,25 @@ Algumas configurações extras podem ser adicionadas após o primeiro valor, adi
   ## Classes
   </summary>
 
-### O que são:
-Uma classe é uma entidade abstrata que encapsula dados e comportamentos relevantes para um conceito específico dentro de um programa. Ela permite que você defina um novo tipo de dado personalizado, permitindo que crie instâncias desse tipo ao longo do código.
+  ### O que são:
+  Uma classe é uma entidade abstrata que encapsula dados e comportamentos relevantes para um conceito específico dentro de um programa. Ela permite que você defina um novo tipo de dado personalizado, permitindo que crie instâncias desse tipo ao longo do código.
 
-**EX:**
-class teste {
-    mensagem: string
-    numero: number
+  **EX:**
+  class teste {
+      mensagem: string
+      numero: number
 
-    constructor (escrita: string, numero: number){
-        this.mensagem = escrita
-        this.numero = numero
-    }
+      constructor (escrita: string, numero: number){
+          this.mensagem = escrita
+          this.numero = numero
+      }
 
-    saida(){
-        console.log(`Olá, ${this.mensagem}, ${ this.numero}`)
-    }
-}
+      saida(){
+          console.log(`Olá, ${this.mensagem}, ${ this.numero}`)
+      }
+  }
+
+<details>
 
 const Teste1 = new teste("Testando",123)
 Teste1.saida()

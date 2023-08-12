@@ -5,7 +5,7 @@ TS não é executado por navegadores/node, é necessário converter. Esta conver
 A 'funcionalidade' dele é, ajudar durante a complicação/desenvolvimento, encontrar erros de lógica e tipagem no código. Ele não muda nada no 'runtime' do código. 
 Extensão .ts
 Instalando:
-npm install -g typescript
+npm install -g typescript && npx tsc
 
 tsc file.ts -> compila o arquivo em javascript
 tsc file.ts --watch ou -w -> Deixa um arquivo sendo "observado" e atualizando a compilação sempre que o arquivo é salvo
